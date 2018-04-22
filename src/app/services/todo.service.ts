@@ -19,7 +19,7 @@ export class TodoService {
   }
 
   public getTodos(): Todo[] {
-    return this.todos;
+    return this.todos.reverse();
   }
 
   public removeTodo(id: number): void {
