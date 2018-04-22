@@ -9,21 +9,22 @@ import { TodoService } from '../../services/todo.service';
 export class TodoInputComponent implements OnInit {
 
   public todoText: string;
+  public isEmpty: boolean;
 
-  constructor(private todoService: TodoService) {
+  constructor(public todoService: TodoService) {
     this.todoText = ''
   }
 
   ngOnInit() {
   }
 
-  private addTodo(): void {
+  public addTodo(): void {
     if(this.todoText != '') {
         this.todoService.addTodo(this.todoText);
         this.todoText = '';
-        this.empty = 0;
+        this.isEmpty = false;
     } else {
-        this.empty = 1;
+        this.isEmpty = true;
     }
   }
 
