@@ -9,7 +9,6 @@ import { TodoService } from '../../services/todo.service';
 export class TodoInputComponent implements OnInit {
 
   public todoText: string;
-  public empty: number;
 
   constructor(private todoService: TodoService) {
     this.todoText = ''
