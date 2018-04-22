@@ -21,9 +21,9 @@ export class TodoInputComponent implements OnInit {
     if(this.todoText != '') {
         this.todoService.addTodo(this.todoText);
         this.todoText = '';
-        this.error = 0;
+        this.empty = 0;
     } else {
-        this.error = 1;
+        this.empty = 1;
     }
   }
 

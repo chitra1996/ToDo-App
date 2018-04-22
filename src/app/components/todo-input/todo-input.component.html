@@ -1,5 +1,5 @@
 <div class="todo-input-wrapper">
   <input type="text" [(ngModel)]="todoText" value="todoText" (keyup.enter)="addTodo()" />
   <button class="btn btn-primary" (click)="addTodo()">ADD</button>
-  <p class="error-message" *ngIf="error == 1">Please enter some task to add in your list</p>
+  <p class="error-message" *ngIf="empty == 1">Please enter some task to add in your list</p>
 </div>
