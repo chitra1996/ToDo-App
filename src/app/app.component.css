@@ -1,10 +1,16 @@
+/* body {
+    background-image: url('./assets/images/wallpaper.jpg');
+} */
+
 .App {
-    text-align: center;
+  text-align: center;
 }
 
 .todo-wrapper {
-    margin: 20px auto 20px auto;
-    width: 60%;
-    border: 5px solid #e8e8e8;
-    padding: 20px;
+  margin: 20px auto 20px auto;
+  width: 60%;
+  border: 1px solid #0a090a;
+  border-radius: 5px;
+  padding: 20px;
+  background: #f5f5f5;
 }
