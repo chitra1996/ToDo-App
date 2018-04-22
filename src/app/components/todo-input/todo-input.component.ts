@@ -18,8 +18,13 @@ export class TodoInputComponent implements OnInit {
   }
 
   private addTodo(): void {
-    this.todoService.addTodo(this.todoText);
-    this.todoText = '';
+    if(this.todoText != '') {
+        this.todoService.addTodo(this.todoText);
+        this.todoText = '';
+        this.error = 0;
+    } else {
+        this.error = 1;
+    }
   }
 
 }
