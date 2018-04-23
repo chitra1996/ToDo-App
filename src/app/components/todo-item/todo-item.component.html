@@ -1,3 +1,9 @@
 <div class="todoWrapper">
-    <button class="removeTodo"(click)="removeTodo()">REMOVE</button>{{todo.text}}
+    <input type="checkbox" (click)="toggle()" />
+    <span *ngIf="!isEditing && !completed" (click)='editTodo()'>{{todo.text}}</span>
+    <span *ngIf="!isEditing && completed" (click)='editTodo()'><del>{{todo.text}}</del></span>
+    <input class="editing" [(ngModel)]="todo.text" value="todo.text"  autofocus *ngIf="isEditing" (blur)="isEditing = false;" (keyup.enter)="isEditing = false;" />
+    <button class="removeTodo"(click)="removeTodo()">REMOVE</button>
+    <button class="editTodo" *ngIf="!isEditing" (click)="editTodo()">EDIT</button>
+    <button class="editTodo" *ngIf="isEditing" (click)="isEditing = false;">UPDATE</button>
 </div>

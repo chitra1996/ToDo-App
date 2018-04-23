@@ -13,17 +13,20 @@ export class TodoService {
   }
 
   public addTodo(text: string): void {
-    let todo = new Todo(this.nextId, text);
+    const todo = new Todo(this.nextId, text);
     this.todos.push(todo);
     this.nextId++;
+    const revertTodo = this.todos.reverse();
   }
 
   public getTodos(): Todo[] {
-    return this.todos.reverse();
+    return this.todos;
   }
 
   public removeTodo(id: number): void {
-    this.todos = this.todos.filter((todo) => todo.id != id);
+    this.todos = this.todos.filter((todo) => todo.id !== id);
   }
+
+  public updateTodo(text: string): void {}
 
 }

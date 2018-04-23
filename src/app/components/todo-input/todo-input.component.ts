@@ -10,16 +10,17 @@ export class TodoInputComponent implements OnInit {
 
   public todoText: string;
   public isEmpty: boolean;
+  public ShowDropDown: boolean;
 
   constructor(public todoService: TodoService) {
-    this.todoText = ''
+    this.todoText = '';
   }
 
   ngOnInit() {
   }
 
   public addTodo(): void {
-    if(this.todoText != '') {
+    if (this.todoText !== '') {
         this.todoService.addTodo(this.todoText);
         this.todoText = '';
         this.isEmpty = false;
