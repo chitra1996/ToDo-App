@@ -15,6 +15,9 @@ export class TodoItemComponent implements OnInit {
   public isEditing: boolean;
   public completed: boolean;
 
+  /**
+   * @param todoService todoService from the services which gives task
+   */
   constructor(public todoService: TodoService) {
     this.isEditing = false;
     this.completed = false;
@@ -24,14 +27,17 @@ export class TodoItemComponent implements OnInit {
   ngOnInit() {
   }
 
+  // function to remove task of the given id
   public removeTodo(): void {
     this.todoService.removeTodo(this.todo.id);
   }
 
+  // function to make the task editable
   public editTodo(): void {
     this.isEditing = true;
   }
 
+  // fuction to mark the task as completed
   public toggle(): void {
     if (this.completed === true) {
       this.completed = false;

@@ -1,11 +1,8 @@
-/* body {
-    background-image: url('./assets/images/wallpaper.jpg');
-} */
-
 .App {
   text-align: center;
 }
 
+/* styling for mobile and small screens */
 @media only screen and (max-width: 600px) {
   .todo-wrapper {
     margin: auto;
@@ -17,6 +14,7 @@
   }
 }
 
+/* styling for laptops and bigger screens */
 @media only screen and (min-width: 992px) {
   .todo-wrapper {
     margin: 20px auto 20px auto;

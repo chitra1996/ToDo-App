@@ -1,3 +1,4 @@
+/* styling for mobile and short screens */
 @media only screen and (max-width: 600px) {
   .todo-input-wrapper {
     margin-bottom: 10px;
@@ -36,7 +37,6 @@
   }
   
   .error-message {
-    /* display: none; */
     border: 0.5px solid #ed6868;
     padding: 10px;
     background: #f3a4a3;
@@ -47,19 +47,20 @@
     width: 80%;
     margin: 0 auto 8px;
     border-radius: 3px;
+  }
+
+  .info-message {
+    text-align: left;
+    display: block;
+    color: #036dac;
+    font-size: 13px;
+    font-weight: 500;
+    font-family: 'sans-serif';
+    margin-left: 7%;
+  }
 }
 
-.info-message {
-  text-align: left;
-  display: block;
-  color: #036dac;
-  font-size: 13px;
-  font-weight: 500;
-  font-family: 'sans-serif';
-  margin-left: 7%;
-}
-}
-
+/* styling for laptops and bigger screens */
 @media only screen and (min-width: 992px) {
   .todo-input-wrapper {
     margin-bottom: 20px;
@@ -99,7 +100,6 @@
   }
 
   .error-message {
-      /* display: none; */
       border: 0.5px solid #ed6868;
       padding: 10px;
       background: #f3a4a3;

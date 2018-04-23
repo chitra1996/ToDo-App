@@ -8,7 +8,7 @@ import { TodoService } from './services/todo.service';
 })
 export class AppComponent {
 
-    constructor(public todoService: TodoService) {
+    constructor(public todoService: TodoService, ) {
 
     }
 }

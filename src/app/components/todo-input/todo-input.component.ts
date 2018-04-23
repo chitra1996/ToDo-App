@@ -8,10 +8,16 @@ import { TodoService } from '../../services/todo.service';
 })
 export class TodoInputComponent implements OnInit {
 
+  // todo task to be added in Todo[]
   public todoText: string;
+  // isEmpty variable to check whether input is empty
   public isEmpty: boolean;
-  public ShowDropDown: boolean;
+  // editList variable to check whether the input box is in focus or not
+  public editList: boolean;
 
+  /**
+   * @param todoService Service to add Todo service to the constructor
+   */
   constructor(public todoService: TodoService) {
     this.todoText = '';
   }
@@ -19,6 +25,7 @@ export class TodoInputComponent implements OnInit {
   ngOnInit() {
   }
 
+  // add todo task in the list if todo input is not empty
   public addTodo(): void {
     if (this.todoText !== '') {
         this.todoService.addTodo(this.todoText);
